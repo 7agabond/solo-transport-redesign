@@ -13,7 +13,7 @@ const Navbar = () => {
     <div>
       <div className="hidden md:flex justify-between bg-gray-400 p-5">
         <h1 className="font-fjalla text-4xl">
-          <a href="/">Solo Transport</a>
+          <a href="/">SOLO TRANSPORT</a>
         </h1>
         <ul className="flex gap-4 items-center p-1">
           <li>
@@ -30,19 +30,19 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      <div className="md:hidden flex justify-between items-center p-2">
+      <div className="md:hidden flex justify-between items-center p-2 border-solid border-b border-gray-300">
         <h1 className="font-fjalla text-4xl">
-          <a href="/">Solo Transport</a>
+          <a href="/">SOLO TRANSPORT</a>
         </h1>
         {menu ? (
           <RxCross2
             onClick={menuToggle}
-            className="z-[2] text-3xl hover:cursor-pointer"
+            className="z-[2] text-4xl hover:cursor-pointer hover:bg-white rounded-full p-1 transition-all"
           />
         ) : (
           <FiAlignJustify
             onClick={menuToggle}
-            className="text-3xl hover:cursor-pointer"
+            className="text-4xl hover:cursor-pointer hover:bg-gray-200 rounded-full p-1 transition-all"
           />
         )}
         <div
@@ -52,18 +52,32 @@ const Navbar = () => {
               : `fixed md:hidden top-[-100%]`
           }
         >
-          <ul className="block gap-4 text-center p-1">
-            <li>
-              <a href="/">Home</a>
+          <ul className="block my-[8rem] text-center text-4xl">
+            <li className="border-solid border-b border-[#FFF] p-5 font-bold font-mono tracking-wider">
+              <a href="/" className="hover:text-yellow-500 transition-all">
+                home
+              </a>
             </li>
-            <li>
-              <a href="/services">Services</a>
+            <li className="border-solid border-b border-[#FFF] p-5 font-bold font-mono tracking-wider">
+              <a
+                href="/services"
+                className="hover:text-yellow-500 transition-all"
+              >
+                services
+              </a>
             </li>
-            <li>
-              <a href="/about">About</a>
+            <li className="border-solid border-b border-[#FFF] p-5 font-bold font-mono tracking-wider">
+              <a href="/about" className="hover:text-yellow-500 transition-all">
+                about
+              </a>
             </li>
-            <li>
-              <a href="/contact">Contact</a>
+            <li className="p-5 font-bold font-mono tracking-wider">
+              <a
+                href="/contact"
+                className="hover:text-yellow-500 transition-all"
+              >
+                contact
+              </a>
             </li>
           </ul>
         </div>
