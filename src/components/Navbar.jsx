@@ -11,27 +11,27 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="hidden md:flex justify-between bg-gray-400 p-5">
-        <h1 className="font-fjalla text-4xl hover:text-yellow-500 transition-all">
+      <div className="sticky hidden md:flex justify-between border-solid border-b border-gray-200 shadow-md">
+        <h1 className="font-fjalla text-4xl hover:text-yellow-500 transition-all tracking-wide p-5">
           <a href="/">SOLO TRANSPORT</a>
         </h1>
         <ul className="flex gap-4 items-center p-1">
-          <li>
+          <li className="min-w-[80px] m-auto py-2 rounded-md text-center border-solid hover:border-b-2 hover:shadow-md active:translate-y-1 border-gray-200 hover:text-yellow-500 transition-all">
             <a href="/">Home</a>
           </li>
-          <li>
+          <li className="min-w-[80px] m-auto py-2 rounded-md text-center border-solid hover:border-b-2 hover:shadow-md active:translate-y-1 border-gray-200 hover:text-yellow-500 transition-all">
             <a href="/services">Services</a>
           </li>
-          <li>
+          <li className="min-w-[80px] m-auto py-2 rounded-md text-center border-solid hover:border-b-2 hover:shadow-md active:translate-y-1 border-gray-200 hover:text-yellow-500 transition-all">
             <a href="/about">About</a>
           </li>
-          <li>
+          <li className="min-w-[80px] m-auto py-2 rounded-md text-center border-solid hover:border-b-2 hover:shadow-md active:translate-y-1 border-gray-200 hover:text-yellow-500 transition-all">
             <a href="/contact">Contact</a>
           </li>
         </ul>
       </div>
-      <div className="md:hidden flex justify-between items-center p-2 border-solid border-b border-gray-300">
-        <h1 className="font-fjalla text-4xl z-[1] hover:text-yellow-500 transition-all">
+      <div className="md:hidden flex justify-between items-center p-3 border-solid border-b border-gray-300 shadow-md">
+        <h1 className="font-fjalla text-4xl z-[1] tracking-wide hover:text-yellow-500 transition-all">
           <a href="/">SOLO TRANSPORT</a>
         </h1>
         {menu ? (
