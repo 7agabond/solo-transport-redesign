@@ -11,26 +11,36 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="sticky hidden md:flex justify-between border-solid border-b border-gray-200 shadow-md">
-        <h1 className="font-fjalla text-4xl hover:text-yellow-500 transition-all tracking-wide p-5">
-          <a href="/">SOLO TRANSPORT</a>
-        </h1>
+      <div className="fixed hidden md:flex w-full justify-between border-solid border-b border-gray-200 shadow-md">
+        <a href="/">
+          <h1 className="font-fjalla text-4xl hover:text-yellow-400 transition-all tracking-wide p-5">
+            SOLO TRANSPORT
+          </h1>
+        </a>
         <ul className="flex gap-4 items-center p-1">
-          <li className="min-w-[80px] m-auto py-2 rounded-md text-center border-solid hover:border-b-2 hover:shadow-md active:translate-y-1 border-gray-200 hover:text-yellow-500 transition-all">
-            <a href="/">Home</a>
-          </li>
-          <li className="min-w-[80px] m-auto py-2 rounded-md text-center border-solid hover:border-b-2 hover:shadow-md active:translate-y-1 border-gray-200 hover:text-yellow-500 transition-all">
-            <a href="/services">Services</a>
-          </li>
-          <li className="min-w-[80px] m-auto py-2 rounded-md text-center border-solid hover:border-b-2 hover:shadow-md active:translate-y-1 border-gray-200 hover:text-yellow-500 transition-all">
-            <a href="/about">About</a>
-          </li>
-          <li className="min-w-[80px] m-auto py-2 rounded-md text-center border-solid hover:border-b-2 hover:shadow-md active:translate-y-1 border-gray-200 hover:text-yellow-500 transition-all">
-            <a href="/contact">Contact</a>
-          </li>
+          <a href="/">
+            <li className="min-w-[80px] m-auto py-2 rounded-md text-center border-solid hover:border-b-2 hover:shadow-md active:translate-y-1 border-gray-200 hover:text-yellow-500 transition-all">
+              Home
+            </li>
+          </a>
+          <a href="/services">
+            <li className="min-w-[80px] m-auto py-2 rounded-md text-center border-solid hover:border-b-2 hover:shadow-md active:translate-y-1 border-gray-200 hover:text-yellow-500 transition-all">
+              Services
+            </li>
+          </a>
+          <a href="/about">
+            <li className="min-w-[80px] m-auto py-2 rounded-md text-center border-solid hover:border-b-2 hover:shadow-md active:translate-y-1 border-gray-200 hover:text-yellow-500 transition-all">
+              About
+            </li>
+          </a>
+          <a href="/contact">
+            <li className="min-w-[80px] m-auto py-2 rounded-md text-center border-solid hover:border-b-2 hover:shadow-md active:translate-y-1 border-gray-200 hover:text-yellow-500 transition-all">
+              Contact
+            </li>
+          </a>
         </ul>
       </div>
-      <div className="md:hidden flex justify-between items-center p-3 border-solid border-b border-gray-300 shadow-md">
+      <div className="fixed md:hidden w-full flex justify-between items-center p-3 border-solid border-b border-gray-300 shadow-md bg-white/[.35]">
         <h1 className="font-fjalla text-4xl z-[1] tracking-wide hover:text-yellow-500 transition-all">
           <a href="/">SOLO TRANSPORT</a>
         </h1>
