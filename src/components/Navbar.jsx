@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <div>
       <div className="hidden md:flex justify-between bg-gray-400 p-5">
-        <h1 className="font-fjalla text-4xl">
+        <h1 className="font-fjalla text-4xl hover:text-yellow-500 transition-all">
           <a href="/">SOLO TRANSPORT</a>
         </h1>
         <ul className="flex gap-4 items-center p-1">
@@ -31,7 +31,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="md:hidden flex justify-between items-center p-2 border-solid border-b border-gray-300">
-        <h1 className="font-fjalla text-4xl">
+        <h1 className="font-fjalla text-4xl z-[1] hover:text-yellow-500 transition-all">
           <a href="/">SOLO TRANSPORT</a>
         </h1>
         {menu ? (
@@ -52,7 +52,7 @@ const Navbar = () => {
               : `fixed md:hidden top-[-100%]`
           }
         >
-          <ul className="block my-[8rem] text-center text-4xl">
+          <ul className="block my-[11rem] text-center text-4xl">
             <li className="border-solid border-b border-[#FFF] p-5 font-bold font-mono tracking-wider">
               <a href="/" className="hover:text-yellow-500 transition-all">
                 home
