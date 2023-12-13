@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FiAlignJustify } from "react-icons/fi";
 import { RxCross2 } from "react-icons/rx";
 
@@ -11,7 +11,7 @@ const Navbar = (props) => {
 
   return (
     <div>
-      <div className="fixed hidden md:flex w-full justify-between border-solid border-b border-gray-200 shadow-md">
+      <div className="fixed bg-white/[0.3] z-10 hidden md:flex w-full justify-between border-solid border-b border-gray-200 shadow-md">
         <a href="/">
           <h1 className="font-fjalla text-4xl hover:text-yellow-400 transition-all tracking-wide p-5 text-gray-700">
             SOLO TRANSPORT
@@ -25,22 +25,22 @@ const Navbar = (props) => {
             🌗
           </li>
           <a href="/">
-            <li className="min-w-[80px] m-auto py-2 rounded-md text-center border-solid hover:border-b-2 hover:shadow-md active:translate-y-1 border-gray-200 hover:text-yellow-500 text-gray-700 transition-all">
+            <li className="min-w-[80px] m-auto py-2 rounded-md text-center border-solid hover:border-b-2 hover:shadow-md active:translate-y-1 border-gray-200 hover:text-yellow-500 transition-all">
               Home
             </li>
           </a>
           <a href="/services">
-            <li className="min-w-[80px] m-auto py-2 rounded-md text-center border-solid hover:border-b-2 hover:shadow-md active:translate-y-1 border-gray-200 hover:text-yellow-500 text-gray-700 transition-all">
+            <li className="min-w-[80px] m-auto py-2 rounded-md text-center border-solid hover:border-b-2 hover:shadow-md active:translate-y-1 border-gray-200 hover:text-yellow-500 transition-all">
               Services
             </li>
           </a>
           <a href="/about">
-            <li className="min-w-[80px] m-auto py-2 rounded-md text-center border-solid hover:border-b-2 hover:shadow-md active:translate-y-1 border-gray-200 hover:text-yellow-500 text-gray-700 transition-all">
+            <li className="min-w-[80px] m-auto py-2 rounded-md text-center border-solid hover:border-b-2 hover:shadow-md active:translate-y-1 border-gray-200 hover:text-yellow-500 transition-all">
               About
             </li>
           </a>
           <a href="/contact">
-            <li className="min-w-[80px] m-auto py-2 rounded-md text-center border-solid hover:border-b-2 hover:shadow-md active:translate-y-1 border-gray-200 hover:text-yellow-500 text-gray-700 transition-all">
+            <li className="min-w-[80px] m-auto py-2 rounded-md text-center border-solid hover:border-b-2 hover:shadow-md active:translate-y-1 border-gray-200 hover:text-yellow-500 transition-all">
               Contact
             </li>
           </a>
@@ -64,8 +64,8 @@ const Navbar = (props) => {
         <div
           className={
             menu
-              ? `fixed md:hidden top-0 left-0 h-full w-full bg-gray-200 ease-in-out duration-500`
-              : `fixed md:hidden top-[-100%]`
+              ? `fixed z-3 md:hidden top-0 left-0 h-full w-full bg-gray-200 ease-in-out duration-500`
+              : `fixed z-3 md:hidden top-[-100%]`
           }
         >
           <ul className="block my-[11rem] text-center text-4xl">
