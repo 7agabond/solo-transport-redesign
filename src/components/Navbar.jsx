@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FiAlignJustify } from "react-icons/fi";
 import { RxCross2 } from "react-icons/rx";
 
-const Navbar = () => {
+const Navbar = (props) => {
   const [menu, setMenu] = useState(false);
 
   function menuToggle() {
@@ -13,28 +13,34 @@ const Navbar = () => {
     <div>
       <div className="fixed hidden md:flex w-full justify-between border-solid border-b border-gray-200 shadow-md">
         <a href="/">
-          <h1 className="font-fjalla text-4xl hover:text-yellow-400 transition-all tracking-wide p-5">
+          <h1 className="font-fjalla text-4xl hover:text-yellow-400 transition-all tracking-wide p-5 text-gray-700">
             SOLO TRANSPORT
           </h1>
         </a>
         <ul className="flex gap-4 items-center p-1">
+          <li
+            className="min-w-[80px] m-auto py-2 rounded-md text-center border-solid hover:border-b-2 hover:shadow-md active:translate-y-1 border-gray-200 hover:text-yellow-500 hover:cursor-pointer transition-all"
+            onClick={props.modeToggle}
+          >
+            🌗
+          </li>
           <a href="/">
-            <li className="min-w-[80px] m-auto py-2 rounded-md text-center border-solid hover:border-b-2 hover:shadow-md active:translate-y-1 border-gray-200 hover:text-yellow-500 transition-all">
+            <li className="min-w-[80px] m-auto py-2 rounded-md text-center border-solid hover:border-b-2 hover:shadow-md active:translate-y-1 border-gray-200 hover:text-yellow-500 text-gray-700 transition-all">
               Home
             </li>
           </a>
           <a href="/services">
-            <li className="min-w-[80px] m-auto py-2 rounded-md text-center border-solid hover:border-b-2 hover:shadow-md active:translate-y-1 border-gray-200 hover:text-yellow-500 transition-all">
+            <li className="min-w-[80px] m-auto py-2 rounded-md text-center border-solid hover:border-b-2 hover:shadow-md active:translate-y-1 border-gray-200 hover:text-yellow-500 text-gray-700 transition-all">
               Services
             </li>
           </a>
           <a href="/about">
-            <li className="min-w-[80px] m-auto py-2 rounded-md text-center border-solid hover:border-b-2 hover:shadow-md active:translate-y-1 border-gray-200 hover:text-yellow-500 transition-all">
+            <li className="min-w-[80px] m-auto py-2 rounded-md text-center border-solid hover:border-b-2 hover:shadow-md active:translate-y-1 border-gray-200 hover:text-yellow-500 text-gray-700 transition-all">
               About
             </li>
           </a>
           <a href="/contact">
-            <li className="min-w-[80px] m-auto py-2 rounded-md text-center border-solid hover:border-b-2 hover:shadow-md active:translate-y-1 border-gray-200 hover:text-yellow-500 transition-all">
+            <li className="min-w-[80px] m-auto py-2 rounded-md text-center border-solid hover:border-b-2 hover:shadow-md active:translate-y-1 border-gray-200 hover:text-yellow-500 text-gray-700 transition-all">
               Contact
             </li>
           </a>
