@@ -1,5 +1,5 @@
 import servicesBackground from "../../assets/763586951.jpg";
-import { animate } from "motion";
+import { inView } from "motion";
 
 const Services = () => {
   return (
