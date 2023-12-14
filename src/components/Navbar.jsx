@@ -9,11 +9,16 @@ const Navbar = (props) => {
     setMenu((prevMenu) => !prevMenu);
   }
 
+  function mobileToggle() {
+    props.modeToggle();
+    menuToggle();
+  }
+
   return (
     <div>
       <div className="fixed bg-white/[0.3] z-10 hidden md:flex w-full justify-between border-solid border-b border-gray-200 shadow-md">
         <a href="/">
-          <h1 className="font-fjalla text-4xl hover:text-yellow-400 transition-all tracking-wide p-5 text-gray-700">
+          <h1 className="font-fjalla text-4xl hover:text-yellow-400 transition-all tracking-wide p-5">
             SOLO TRANSPORT
           </h1>
         </a>
@@ -69,6 +74,12 @@ const Navbar = (props) => {
           }
         >
           <ul className="block my-[11rem] text-center text-4xl">
+            <li
+              className="border-solid border-b border-[#FFF] p-5 font-bold font-mono tracking-wider cursor-pointer"
+              onClick={mobileToggle}
+            >
+              🌗
+            </li>
             <li className="border-solid border-b border-[#FFF] p-5 font-bold font-mono tracking-wider">
               <a href="/" className="hover:text-yellow-500 transition-all">
                 home

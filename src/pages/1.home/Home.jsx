@@ -1,8 +1,14 @@
 import truckImg from "../../assets/800318861.jpg";
 import stiLogo from "../../assets/sti-logo-black-yellow.png";
 import Typed from "react-typed";
+import { animate } from "motion";
 
 const Home = (props) => {
+  props.darkMode
+    ? animate("body", { backgroundColor: "rgb(2 6 23)" })
+    : props.darkMode === false &&
+      animate("body", { backgroundColor: "initial" });
+
   return (
     <main className={`${props.darkMode ? "bg-slate-950" : "bg-white"} `}>
       <div className="z-1">
@@ -17,14 +23,14 @@ const Home = (props) => {
           </h1>
           <img
             src={stiLogo}
-            className="p-[2rem] md:pt-8 md:mb-[-3rem] xl:mb-[0] xl:pb-[5rem] mx-auto w-[100%] md:w-[50%]"
+            className="p-[2rem] md:pt-8 md:mb-[-3rem] xl:mb-[0] xl:pb-[5rem] mx-auto w-[9s00%] md:w-[50%]"
           />
         </div>
         <div className="hidden md:flex md:relative max-w-[70%] m-auto pb-[5rem] pt-[2rem] xl:mt-[-22rem]">
           <Typed
             className={`${
               props.darkMode ? "text-white" : "text-gray-700"
-            } md:text-5xl sm:text-4xl text-xl tracking-wide`}
+            } md:text-5xl sm:text-4xl text-xl tracking-wide text-center`}
             strings={[
               "In business since 1998 and based out of Laredo, TX., we have the experience and capacity to meet your needs in flat bed and specialized freight.",
             ]}
@@ -32,8 +38,12 @@ const Home = (props) => {
             backSpeed={140}
           />
         </div>
-        <p className="px-5 py-8 text-gray-700 text-center md:hidden">
-          "In business since 1998 and based out of Laredo, TX., we have the
+        <p
+          className={`px-5 py-8 ${
+            props.darkMode ? "text-white" : "text-gray-700"
+          } text-center md:hidden`}
+        >
+          In business since 1998 and based out of Laredo, TX., we have the
           experience and capacity to meet your needs in flat bed and specialized
           freight.
         </p>
