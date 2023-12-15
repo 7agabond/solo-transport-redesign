@@ -30,7 +30,7 @@ const Home = (props) => {
             strings={[
               "In business since 1998 and based out of Laredo, TX., we have the experience and capacity to meet your needs in flat bed and specialized freight.",
             ]}
-            typeSpeed={100}
+            typeSpeed={50}
             backSpeed={140}
           />
         </div>

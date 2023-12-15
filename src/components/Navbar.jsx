@@ -27,7 +27,7 @@ const Navbar = (props) => {
             className="min-w-[80px] m-auto py-2 rounded-md text-center border-solid hover:border-b-2 hover:shadow-md active:translate-y-1 border-gray-200 hover:text-yellow-500 hover:cursor-pointer transition-all"
             onClick={props.modeToggle}
           >
-            🌗
+            {props.darkMode ? "🌗" : "🌓"}
           </li>
           <a href="/">
             <li className="min-w-[80px] m-auto py-2 rounded-md text-center border-solid hover:border-b-2 hover:shadow-md active:translate-y-1 border-gray-200 hover:text-yellow-500 transition-all">
@@ -78,7 +78,7 @@ const Navbar = (props) => {
               className="border-solid border-b border-[#FFF] p-5 font-bold font-mono tracking-wider cursor-pointer"
               onClick={mobileToggle}
             >
-              🌗
+              {props.darkMode ? "🌗" : "🌓"}
             </li>
             <li className="border-solid border-b border-[#FFF] p-5 font-bold font-mono tracking-wider">
               <a href="/" className="hover:text-yellow-500 transition-all">

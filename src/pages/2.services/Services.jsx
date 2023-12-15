@@ -1,5 +1,7 @@
 import servicesBackground from "../../assets/763586951.jpg";
-import { animate, inView } from "motion";
+import { animate } from "motion";
+import AOS from "aos";
+import { useEffect } from "react";
 
 const Services = (props) => {
   props.darkMode
@@ -7,14 +9,16 @@ const Services = (props) => {
     : props.darkMode === false &&
       animate("body", { backgroundColor: "initial" });
 
-  const slideRight = document.getElementById("slide-right");
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
 
-  inView("slideRight", () => {
-    console.log("slide has entered the viewport!");
-  });
+  setTimeout(() => {
+    AOS.refresh();
+  }, 500);
 
   return (
-    <div>
+    <div className="mb-[4rem]">
       <main>
         <div className="relative z-0 text-center">
           <img src={servicesBackground} alt="ServicesBg" className="w-full" />
@@ -22,7 +26,11 @@ const Services = (props) => {
             Services<span className="text-yellow-300">.</span>
           </h1>
         </div>
-        <div id="slide-right" className="wrap slideInRight animated">
+        <div
+          data-aos="fade-right"
+          data-aos-anchor-placement="bottom-bottom"
+          data-aos-once="false"
+        >
           <h1>Hello!</h1>
           <p>This is a test container!</p>
           <p>This is a test container!</p>
@@ -30,71 +38,11 @@ const Services = (props) => {
           <p>This is a test container!</p>
           <p>This is a test container!</p>
         </div>
-        <div id="slide-right" className="wrap slideInRight animated">
-          <h1>Hello!</h1>
-          <p>This is a test container!</p>
-          <p>This is a test container!</p>
-          <p>This is a test container!</p>
-          <p>This is a test container!</p>
-          <p>This is a test container!</p>
-        </div>
-        <div id="slide-right" className="wrap slideInRight animated">
-          <h1>Hello!</h1>
-          <p>This is a test container!</p>
-          <p>This is a test container!</p>
-          <p>This is a test container!</p>
-          <p>This is a test container!</p>
-          <p>This is a test container!</p>
-        </div>
-        <div id="slide-right" className="wrap slideInRight animated">
-          <h1>Hello!</h1>
-          <p>This is a test container!</p>
-          <p>This is a test container!</p>
-          <p>This is a test container!</p>
-          <p>This is a test container!</p>
-          <p>This is a test container!</p>
-        </div>
-        <div id="slide-right" className="wrap slideInRight animated">
-          <h1>Hello!</h1>
-          <p>This is a test container!</p>
-          <p>This is a test container!</p>
-          <p>This is a test container!</p>
-          <p>This is a test container!</p>
-          <p>This is a test container!</p>
-        </div>
-        <div id="slide-right" className="wrap slideInRight animated">
-          <h1>Hello!</h1>
-          <p>This is a test container!</p>
-          <p>This is a test container!</p>
-          <p>This is a test container!</p>
-          <p>This is a test container!</p>
-          <p>This is a test container!</p>
-        </div>
-        <div id="slide-right" className="wrap slideInRight animated">
-          <h1>Hello!</h1>
-          <p>This is a test container!</p>
-          <p>This is a test container!</p>
-          <p>This is a test container!</p>
-          <p>This is a test container!</p>
-          <p>This is a test container!</p>
-        </div>
-        <div id="slide-right" className="wrap slideInRight animated">
-          <h1>Hello!</h1>
-          <p>This is a test container!</p>
-          <p>This is a test container!</p>
-          <p>This is a test container!</p>
-          <p>This is a test container!</p>
-          <p>This is a test container!</p>
-        </div>
-        <div id="slide-right" className="wrap slideInRight animated">
-          <h1>Hello!</h1>
-          <p>This is a test container!</p>
-          <p>This is a test container!</p>
-          <p>This is a test container!</p>
-          <p>This is a test container!</p>
-          <p>This is a test container!</p>
-        </div>
-        <div id="slide-right" className="wrap slideInRight animated">
+        <div
+          data-aos="fade-left"
+          data-aos-anchor-placement="bottom-bottom"
+          data-aos-once="false"
+        >
           <h1>Hello!</h1>
           <p>This is a test container!</p>
           <p>This is a test container!</p>

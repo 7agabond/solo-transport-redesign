@@ -5,6 +5,7 @@ import {
   useFetcher,
 } from "react-router-dom";
 import { useEffect, useState } from "react";
+import "aos/dist/aos.css";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -23,7 +24,7 @@ function App() {
   return (
     <div>
       <Router>
-        <Navbar modeToggle={modeToggle} />
+        <Navbar modeToggle={modeToggle} darkMode={darkMode} />
         <Routes>
           <Route exact path="/" element={<Home darkMode={darkMode} />} />
           <Route
