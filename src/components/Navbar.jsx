@@ -51,7 +51,7 @@ const Navbar = (props) => {
           </a>
         </ul>
       </div>
-      <div className="fixed md:hidden w-full flex justify-between items-center p-3 border-solid border-b border-gray-300 shadow-md bg-white/[.35]">
+      <div className="fixed z-10 md:hidden w-full flex justify-between items-center p-3 border-solid border-b border-gray-300 shadow-md bg-white/[.35]">
         <h1 className="font-fjalla text-4xl z-[1] tracking-wide hover:text-yellow-500 transition-all">
           <a href="/">SOLO TRANSPORT</a>
         </h1>
@@ -69,8 +69,8 @@ const Navbar = (props) => {
         <div
           className={
             menu
-              ? `fixed z-3 md:hidden top-0 left-0 h-full w-full bg-gray-200 ease-in-out duration-500`
-              : `fixed z-3 md:hidden top-[-100%]`
+              ? `fixed md:hidden top-0 left-0 h-full w-full bg-gray-200 ease-in-out duration-500`
+              : `fixed md:hidden top-[-100%]`
           }
         >
           <ul className="block my-[11rem] text-center text-4xl">
