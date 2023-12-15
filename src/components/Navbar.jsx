@@ -18,6 +18,7 @@ const Navbar = (props) => {
     <div>
       <div className="fixed bg-white/[0.3] z-10 hidden md:flex w-full justify-between border-solid border-b border-gray-200 shadow-md">
         <a href="/">
+          {/* Make dark mode affect Navbar as well! */}
           <h1 className="font-fjalla text-4xl hover:text-yellow-400 transition-all tracking-wide p-5">
             SOLO TRANSPORT
           </h1>

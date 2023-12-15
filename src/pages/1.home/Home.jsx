@@ -1,7 +1,8 @@
+import { useState, useEffect } from "react";
+import { animate } from "motion";
 import truckImg from "../../assets/800318861.jpg";
 import stiLogo from "../../assets/sti-logo-black-yellow.png";
 import Typed from "react-typed";
-import { animate } from "motion";
 
 const Home = (props) => {
   props.darkMode
@@ -11,28 +12,29 @@ const Home = (props) => {
 
   return (
     <main>
-      <div className="z-1">
+      <div className="md:relative text-center mb-[4rem] md:mb-[initial]">
         <img src={truckImg} className="w-full" />
-        <div className="static mx-auto rounded-lg md:relative md:max-w-[65%] md:top-[-10vw] xl:top-[-20vw] container-fadein">
-          <h1 className=" text-yellow-300 font-bold text-4xl md:text-5xl text-center py-7 font-systemui">
+        <div className="md:absolute md:bottom-[0%] md:left-[50%] md:translate-x-[-50%] md:translate-y-[-50%] text-center m-auto container-fadein w-[80%]">
+          <h1 className=" text-yellow-300 text-4xl xl:text-6xl mt-[2rem] font-bold">
             Solo Transport Inc.
           </h1>
-          <img
-            src={stiLogo}
-            className="p-[2rem] md:pt-8 md:mb-[-3rem] xl:mb-[0] xl:pb-[5rem] mx-auto w-[9s00%] md:w-[50%]"
-          />
-        </div>
-        <div className="md:flex md:relative max-w-[70%] m-auto pb-[5rem] pt-[2rem] xl:mt-[-22rem] text-center">
-          <Typed
-            className={`${
-              props.darkMode ? "text-white" : "text-gray-700"
-            } md:text-4xl text-xl tracking-wide text-center`}
-            strings={[
-              "In business since 1998 and based out of Laredo, TX., we have the experience and capacity to meet your needs in flat bed and specialized freight.",
-            ]}
-            typeSpeed={50}
-            backSpeed={140}
-          />
+          <img src={stiLogo} className="m-auto my-[4rem] md:w-[40%]" />
+          <div
+            className={`md:absolute p-[1rem] ${
+              props.darkMode === false ? "md:bg-white/[0.5] md:rounded-md" : ""
+            }`}
+          >
+            <Typed
+              className={`${
+                props.darkMode ? "text-white" : "text-gray-700"
+              } md:text-2xl xl:text-4xl text-xl tracking-wide`}
+              strings={[
+                "In business since 1998 and based out of Laredo, TX., we have the experience and capacity to meet your needs in flat bed and specialized freight.",
+              ]}
+              typeSpeed={50}
+              backSpeed={140}
+            />
+          </div>
         </div>
       </div>
     </main>
