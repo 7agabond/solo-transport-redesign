@@ -21,17 +21,19 @@ const Home = (props) => {
           <img src={stiLogo} className="m-auto my-[4rem] md:w-[40%]" />
           <div
             className={`md:absolute p-[1rem] ${
-              props.darkMode === false ? "md:bg-white/[0.5] md:rounded-md" : ""
+              props.darkMode
+                ? "md:bg-black/[0.3] md:rounded-md"
+                : "md:bg-white/[0.4] md:rounded-md"
             }`}
           >
             <Typed
               className={`${
-                props.darkMode ? "text-white" : "text-gray-700"
+                props.darkMode ? "text-white" : "text-gray-900"
               } md:text-2xl xl:text-4xl text-xl tracking-wide`}
               strings={[
                 "In business since 1998 and based out of Laredo, TX., we have the experience and capacity to meet your needs in flat bed and specialized freight.",
               ]}
-              typeSpeed={50}
+              typeSpeed={30}
               backSpeed={140}
             />
           </div>

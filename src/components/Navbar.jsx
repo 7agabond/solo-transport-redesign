@@ -16,9 +16,12 @@ const Navbar = (props) => {
 
   return (
     <div>
-      <div className="fixed bg-white/[0.3] z-10 hidden md:flex w-full justify-between border-solid border-b border-gray-200 shadow-md">
+      <div
+        className={`fixed ${
+          props.darkMode ? "bg-black/[0.3] text-white" : "bg-white/[0.3]"
+        } z-10 hidden md:flex w-full justify-between border-solid border-b border-gray-200 shadow-md`}
+      >
         <a href="/">
-          {/* Make dark mode affect Navbar as well! */}
           <h1 className="font-fjalla text-4xl hover:text-yellow-400 transition-all tracking-wide p-5">
             SOLO TRANSPORT
           </h1>
@@ -52,25 +55,35 @@ const Navbar = (props) => {
           </a>
         </ul>
       </div>
-      <div className="fixed z-10 md:hidden w-full flex justify-between items-center p-3 border-solid border-b border-gray-300 shadow-md bg-white/[.35]">
+      <div
+        className={`fixed ${
+          props.darkMode ? "bg-black/[0.3] text-white" : "bg-white/[0.3]"
+        } z-10 md:hidden w-full flex justify-between items-center p-3 border-solid border-b border-gray-300 shadow-md`}
+      >
         <h1 className="font-fjalla text-4xl z-[1] tracking-wide hover:text-yellow-500 transition-all">
           <a href="/">SOLO TRANSPORT</a>
         </h1>
         {menu ? (
           <RxCross2
             onClick={menuToggle}
-            className="z-[2] text-4xl hover:cursor-pointer hover:bg-white rounded-full p-1 transition-all"
+            className={`${
+              props.darkMode ? "hover:bg-gray-700" : "hover:bg-gray-200"
+            } z-[2] text-4xl hover:cursor-pointer hover:bg-white rounded-full p-1 transition-all`}
           />
         ) : (
           <FiAlignJustify
             onClick={menuToggle}
-            className="text-4xl hover:cursor-pointer hover:bg-gray-200 rounded-full p-1 transition-all"
+            className={`${
+              props.darkMode ? "hover:bg-gray-700" : "hover:bg-gray-200"
+            } text-4xl hover:cursor-pointer rounded-full p-1 transition-all`}
           />
         )}
         <div
           className={
             menu
-              ? `fixed md:hidden top-0 left-0 h-full w-full bg-gray-200 ease-in-out duration-500`
+              ? `fixed md:hidden top-0 left-0 h-full w-full ${
+                  props.darkMode ? "bg-slate-900" : "bg-gray-200"
+                } ease-in-out duration-500`
               : `fixed md:hidden top-[-100%]`
           }
         >
