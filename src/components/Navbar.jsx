@@ -67,15 +67,15 @@ const Navbar = (props) => {
           <RxCross2
             onClick={menuToggle}
             className={`${
-              props.darkMode ? "hover:bg-gray-700" : "hover:bg-gray-200"
-            } z-[2] text-4xl hover:cursor-pointer hover:bg-white rounded-full p-1 transition-all`}
+              props.darkMode ? "hover:bg-gray-700" : "hover:bg-white"
+            } z-[2] text-4xl hover:cursor-pointer rounded-full p-1 transition-all`}
           />
         ) : (
           <FiAlignJustify
             onClick={menuToggle}
             className={`${
-              props.darkMode ? "hover:bg-gray-700" : "hover:bg-gray-200"
-            } text-4xl hover:cursor-pointer rounded-full p-1 transition-all`}
+              props.darkMode ? "hover:bg-gray-700" : "hover:bg-white"
+            } z-[2] text-4xl hover:cursor-pointer rounded-full p-1 transition-all`}
           />
         )}
         <div
