@@ -1,12 +1,8 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useFetcher,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "aos/dist/aos.css";
 import "./App.css";
+import { useLocalStorage } from "./components/useLocalStorage";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/1.home/Home";
@@ -15,10 +11,17 @@ import About from "./pages/3.about/About";
 import Contact from "./pages/4.contact/Contact";
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const { setItem, getItem } = useLocalStorage("value");
+
+  const [darkMode, setDarkMode] = useState(true);
+
+  useEffect(() => {
+    setDarkMode(getItem());
+  }, []);
 
   function modeToggle() {
     setDarkMode((prevMode) => !prevMode);
+    setItem(!darkMode);
   }
 
   return (
