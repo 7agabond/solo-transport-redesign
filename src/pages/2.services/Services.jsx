@@ -35,28 +35,72 @@ const Services = (props) => {
             </h1>
           </div>
           <div
-            data-aos="fade-right"
-            data-aos-anchor-placement="bottom-bottom"
-            data-aos-once="false"
-          >
-            <h1>Hello!</h1>
-            <p>This is a test container!</p>
-            <p>This is a test container!</p>
-            <p>This is a test container!</p>
-            <p>This is a test container!</p>
-            <p>This is a test container!</p>
-          </div>
-          <div
             data-aos="fade-left"
             data-aos-anchor-placement="bottom-bottom"
             data-aos-once="false"
+            className={`${
+              props.darkMode ? "text-white" : "text-gray-600"
+            } text-center`}
           >
-            <h1>Hello!</h1>
-            <p>This is a test container!</p>
-            <p>This is a test container!</p>
-            <p>This is a test container!</p>
-            <p>This is a test container!</p>
-            <p>This is a test container!</p>
+            <h1>
+              We'll deliver internationally
+              <span className="text-yellow-400">.</span>
+            </h1>
+            <p>
+              With a network of carriers and terminals across North America, we
+              can get your freight moving quickly and delivered to/from Canada
+              and Mexico, as well as the Contiguous USA.
+            </p>
+          </div>
+          <div
+            data-aos="fade-right"
+            data-aos-anchor-placement="bottom-bottom"
+            data-aos-once="false"
+            className={`${
+              props.darkMode ? "text-white" : "text-gray-800"
+            } text-center`}
+          >
+            <h1>
+              FTL & LTL<span className="text-yellow-400">.</span>
+            </h1>
+            <p>
+              We'll move your Full Truckload or Less Than Truckload freight for
+              a competitive price.
+            </p>
+          </div>
+          <div
+            data-aos="fade-right"
+            data-aos-anchor-placement="bottom-bottom"
+            data-aos-once="false"
+            className={`${
+              props.darkMode ? "text-white" : "text-gray-600"
+            } text-center`}
+          >
+            <h1>
+              Specialized Freight<span className="text-yellow-400">.</span>
+            </h1>
+            <p>
+              We have very competent drivers, partners and dedicated specialized
+              equipment to meet your over-sized and over-weight freight.
+            </p>
+          </div>
+          <div
+            data-aos="fade-right"
+            data-aos-anchor-placement="bottom-bottom"
+            data-aos-once="false"
+            className={`${
+              props.darkMode ? "text-white" : "text-gray-600"
+            } text-center`}
+          >
+            <h1>
+              Infrastructure<span className="text-yellow-400">.</span>
+            </h1>
+            <p>
+              Our secure yard is located near the World Trade International
+              Bridge. From here we can coordinate with all parties involved in
+              the movement of freight. We have the right equipment to help get
+              your freight on the road.
+            </p>
           </div>
         </main>
       </div>
