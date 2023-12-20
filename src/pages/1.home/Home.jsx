@@ -3,12 +3,19 @@ import { animate } from "motion";
 import truckImg from "../../assets/800318861.jpg";
 import stiLogo from "../../assets/sti-logo-black-yellow.png";
 import Typed from "react-typed";
+import $ from "jquery";
 
 const Home = (props) => {
   props.darkMode
     ? animate("body", { backgroundColor: "rgb(2 6 23)" })
     : props.darkMode === false &&
       animate("body", { backgroundColor: "initial" });
+
+  useEffect(() => {
+    $(window).on("load", () => {
+      $(".loader-wrapper").fadeOut("slow");
+    });
+  }, []);
 
   return (
     <>
@@ -41,6 +48,11 @@ const Home = (props) => {
           </div>
         </div>
       </main>
+      <div className="loader-wrapper">
+        <span className="loader">
+          <span className="loader-inner"></span>
+        </span>
+      </div>
     </>
   );
 };

@@ -2,12 +2,19 @@ import { animate } from "motion";
 import { useEffect } from "react";
 import servicesBackground from "../../assets/763586951.jpg";
 import AOS from "aos";
+import $ from "jquery";
 
 const Services = (props) => {
   props.darkMode
     ? animate("body", { backgroundColor: "rgb(2 6 23)" })
     : props.darkMode === false &&
       animate("body", { backgroundColor: "initial" });
+
+  useEffect(() => {
+    $(window).on("load", () => {
+      $(".loader-wrapper").fadeOut("slow");
+    });
+  }, []);
 
   useEffect(() => {
     AOS.init({ duration: 2000 });
@@ -52,6 +59,11 @@ const Services = (props) => {
             <p>This is a test container!</p>
           </div>
         </main>
+      </div>
+      <div className="loader-wrapper">
+        <span className="loader">
+          <span className="loader-inner"></span>
+        </span>
       </div>
     </>
   );

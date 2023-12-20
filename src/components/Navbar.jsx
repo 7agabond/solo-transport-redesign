@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { FiAlignJustify } from "react-icons/fi";
 import { RxCross2 } from "react-icons/rx";
 
