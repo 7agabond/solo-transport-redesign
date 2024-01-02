@@ -38,9 +38,7 @@ const Services = (props) => {
             data-aos="fade-left"
             data-aos-anchor-placement="bottom-bottom"
             data-aos-once="false"
-            className={`${
-              props.darkMode ? "text-white" : "text-gray-600"
-            } text-center`}
+            className={`${props.darkMode ? "text-white" : ""} text-center`}
           >
             <h1>
               We'll deliver internationally
@@ -56,9 +54,7 @@ const Services = (props) => {
             data-aos="fade-right"
             data-aos-anchor-placement="bottom-bottom"
             data-aos-once="false"
-            className={`${
-              props.darkMode ? "text-white" : "text-gray-800"
-            } text-center`}
+            className={`${props.darkMode ? "text-white" : ""} text-center`}
           >
             <h1>
               FTL & LTL<span className="text-yellow-400">.</span>
@@ -72,9 +68,7 @@ const Services = (props) => {
             data-aos="fade-right"
             data-aos-anchor-placement="bottom-bottom"
             data-aos-once="false"
-            className={`${
-              props.darkMode ? "text-white" : "text-gray-600"
-            } text-center`}
+            className={`${props.darkMode ? "text-white" : ""} text-center`}
           >
             <h1>
               Specialized Freight<span className="text-yellow-400">.</span>
@@ -88,9 +82,7 @@ const Services = (props) => {
             data-aos="fade-right"
             data-aos-anchor-placement="bottom-bottom"
             data-aos-once="false"
-            className={`${
-              props.darkMode ? "text-white" : "text-gray-600"
-            } text-center`}
+            className={`${props.darkMode ? "text-white" : ""} text-center`}
           >
             <h1>
               Infrastructure<span className="text-yellow-400">.</span>
