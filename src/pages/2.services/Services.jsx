@@ -29,7 +29,11 @@ const Services = (props) => {
       <div className="mb-[4rem]">
         <main>
           <div className="relative z-0 text-center">
-            <img src={servicesBackground} alt="ServicesBg" className="w-full" />
+            <img
+              src={servicesBackground}
+              alt="ServicesBg"
+              className="w-full md:h-[40vw] md:object-cover"
+            />
             <h1 className="absolute text-center top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-white text-6xl tracking-wider">
               Services<span className="text-yellow-300">.</span>
             </h1>
