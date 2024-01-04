@@ -21,8 +21,8 @@ const Home = (props) => {
     <>
       <main>
         <div className="md:relative text-center mb-[4rem] md:mb-[initial]">
-          <img src={truckImg} className="w-full" />
-          <div className="md:absolute md:bottom-[0%] md:left-[50%] md:translate-x-[-50%] md:translate-y-[-50%] text-center m-auto container-fadein w-[80%]">
+          <img src={truckImg} className="w-full md:h-[96.4vh] object-cover" />
+          <div className="md:absolute md:bottom-[15%] md:left-[50%] md:translate-x-[-50%] md:translate-y-[-50%] text-center m-auto container-fadein w-[80%]">
             <h1 className=" text-yellow-300 text-4xl xl:text-6xl mt-[2rem] font-bold">
               Solo Transport Inc.
             </h1>

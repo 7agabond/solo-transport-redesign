@@ -208,7 +208,7 @@ const Services = (props) => {
                 <h1
                   className={`${
                     props.darkMode ? "text-[white]" : ""
-                  } font-bold tracking-wide text-[1.6rem] mb-[0.5rem]`}
+                  } font-bold tracking-wide text-[1.6rem] mt-[1rem] mb-[0.5rem]`}
                 >
                   We offer a variety of services
                   <span className="text-yellow-400">.</span>
@@ -216,15 +216,17 @@ const Services = (props) => {
                 <ul
                   className={`${
                     props.darkMode ? "text-gray-400" : "text-gray-800"
-                  } text-[1.2rem] list-none`}
+                  } text-[1.1rem] list-none`}
                 >
-                  <li>Bonded Freight to/from Canada</li>
-                  <li>Door to Door Service US/Mexico</li>
-                  <li>Mexican Transportation</li>
-                  <li>Border Crossing</li>
-                  <li>Transloading</li>
-                  <li>Drayage</li>
-                  <li>Storage</li>
+                  <li className="mb-[0.3rem]">Bonded Freight to/from Canada</li>
+                  <li className="mb-[0.3rem]">
+                    Door to Door Service US/Mexico
+                  </li>
+                  <li className="mb-[0.3rem]">Mexican Transportation</li>
+                  <li className="mb-[0.3rem]">Border Crossing</li>
+                  <li className="mb-[0.3rem]">Transloading</li>
+                  <li className="mb-[0.3rem]">Drayage</li>
+                  <li className="mb-[0.3rem]">Storage</li>
                 </ul>
               </div>
             </>
