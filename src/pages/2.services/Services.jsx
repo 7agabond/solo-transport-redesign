@@ -30,7 +30,7 @@ const Services = (props) => {
   }, []);
 
   useEffect(() => {
-    AOS.init({ duration: 2000 });
+    AOS.init({ duration: 2500 });
   }, []);
 
   setTimeout(() => {
@@ -60,9 +60,9 @@ const Services = (props) => {
             <>
               <div
                 data-aos="fade-left"
-                data-aos-anchor-placement="bottom-bottom"
                 data-aos-once="true"
-                className="text-center p-[1.5rem]"
+                data-aos-anchor-placement="bottom-bottom"
+                className="text-center p-[1.7rem]"
               >
                 <h1
                   className={`${
@@ -84,9 +84,9 @@ const Services = (props) => {
               </div>
               <div
                 data-aos="fade-right"
-                data-aos-anchor-placement="bottom-bottom"
                 data-aos-once="true"
-                className="text-center p-[1.5rem]"
+                data-aos-anchor-placement="bottom-bottom"
+                className="text-center p-[1.7rem]"
               >
                 <h1
                   className={`${
@@ -107,9 +107,9 @@ const Services = (props) => {
               </div>
               <div
                 data-aos="fade-left"
-                data-aos-anchor-placement="bottom-bottom"
                 data-aos-once="true"
-                className="text-center p-[1.5rem]"
+                data-aos-anchor-placement="bottom-bottom"
+                className="text-center p-[1.7rem]"
               >
                 <h1
                   className={`${
@@ -131,9 +131,9 @@ const Services = (props) => {
               </div>
               <div
                 data-aos="fade-right"
-                data-aos-anchor-placement="bottom-bottom"
                 data-aos-once="true"
-                className="text-center p-[1.5rem]"
+                data-aos-anchor-placement="bottom-bottom"
+                className="text-center p-[1.7rem]"
               >
                 <h1
                   className={`${
@@ -155,9 +155,9 @@ const Services = (props) => {
               </div>
               <div
                 data-aos="fade-left"
-                data-aos-anchor-placement="bottom-bottom"
                 data-aos-once="true"
-                className="text-center p-[1.5rem]"
+                data-aos-anchor-placement="bottom-bottom"
+                className="text-center p-[1.7rem]"
               >
                 <h1
                   className={`${
@@ -179,9 +179,9 @@ const Services = (props) => {
               </div>
               <div
                 data-aos="fade-right"
-                data-aos-anchor-placement="bottom-bottom"
                 data-aos-once="true"
-                className="text-center p-[1.5rem]"
+                data-aos-anchor-placement="bottom-bottom"
+                className="text-center p-[1.7rem]"
               >
                 <h1
                   className={`${
@@ -201,9 +201,9 @@ const Services = (props) => {
               </div>
               <div
                 data-aos="fade"
-                data-aos-anchor-placement="bottom-bottom"
                 data-aos-once="true"
-                className="text-center p-[1.5rem]"
+                data-aos-anchor-placement="bottom-bottom"
+                className="text-center p-[1.7rem]"
               >
                 <h1
                   className={`${
@@ -236,33 +236,45 @@ const Services = (props) => {
                 data-aos="fade-up"
                 data-aos-anchor-placement="bottom-bottom"
                 data-aos-once="false"
-                className={`${
-                  props.darkMode ? "text-white" : ""
-                } text-center p-[1.5rem]`}
+                className="text-center p-[2rem] w-[65%] m-auto"
               >
-                <h1>
+                <h1
+                  className={`${
+                    props.darkMode ? "text-white" : ""
+                  } font-bold tracking-wide text-[2rem] mb-[1rem]`}
+                >
                   We'll deliver internationally
                   <span className="text-yellow-400">.</span>
                 </h1>
-                <p>
+                <p
+                  className={`${
+                    props.darkMode ? "text-gray-400" : "text-gray-800"
+                  } text-[1.7rem]`}
+                >
                   With a network of carriers and terminals across North America,
                   we can get your freight moving quickly and delivered to/from
                   Canada and Mexico, as well as the Contiguous USA.
                 </p>
               </div>
-              <div className="services-grid p-[1.5rem]">
+              <div className="services-grid p-[2rem] w-[70%] m-auto">
                 <div
                   data-aos="fade-right"
                   data-aos-anchor-placement="bottom-bottom"
                   data-aos-once="false"
-                  className={`${
-                    props.darkMode ? "text-white" : ""
-                  } text-center`}
+                  className="text-center"
                 >
-                  <h1>
+                  <h1
+                    className={`${
+                      props.darkMode ? "text-white" : ""
+                    } font-bold tracking-wide text-[2rem] mb-[1rem]`}
+                  >
                     FTL & LTL<span className="text-yellow-400">.</span>
                   </h1>
-                  <p>
+                  <p
+                    className={`${
+                      props.darkMode ? "text-gray-400" : "text-gray-800"
+                    } text-[1.7rem]`}
+                  >
                     We'll move your Full Truckload or Less Than Truckload
                     freight for a competitive price.
                   </p>
@@ -271,14 +283,20 @@ const Services = (props) => {
                   data-aos="fade-up"
                   data-aos-anchor-placement="bottom-bottom"
                   data-aos-once="false"
-                  className={`${
-                    props.darkMode ? "text-white" : ""
-                  } text-center`}
+                  className="text-center"
                 >
-                  <h1>
+                  <h1
+                    className={`${
+                      props.darkMode ? "text-white" : ""
+                    } font-bold tracking-wide text-[2rem] mb-[1rem]`}
+                  >
                     Infrastructure<span className="text-yellow-400">.</span>
                   </h1>
-                  <p>
+                  <p
+                    className={`${
+                      props.darkMode ? "text-gray-400" : "text-gray-800"
+                    } text-[1.7rem]`}
+                  >
                     Our secure yard is located near the World Trade
                     International Bridge. From here we can coordinate with all
                     parties involved in the movement of freight. We have the
@@ -289,18 +307,73 @@ const Services = (props) => {
                   data-aos="fade-left"
                   data-aos-anchor-placement="bottom-bottom"
                   data-aos-once="false"
-                  className={`${
-                    props.darkMode ? "text-white" : ""
-                  } text-center`}
+                  className="text-center"
                 >
-                  <h1>
+                  <h1
+                    className={`${
+                      props.darkMode ? "text-white" : ""
+                    } font-bold tracking-wide text-[2rem] mb-[1rem]`}
+                  >
                     Specialized Freight
                     <span className="text-yellow-400">.</span>
                   </h1>
-                  <p>
+                  <p
+                    className={`${
+                      props.darkMode ? "text-gray-400" : "text-gray-800"
+                    } text-[1.7rem]`}
+                  >
                     We have very competent drivers, partners and dedicated
                     specialized equipment to meet your over-sized and
                     over-weight freight.
+                  </p>
+                </div>
+              </div>
+              <div className="services-grid-2 p-[2rem] w-[70%] m-auto">
+                <div
+                  data-aos="fade-up"
+                  data-aos-anchor-placement="bottom-bottom"
+                  data-aos-once="false"
+                  className="text-center"
+                >
+                  <h1
+                    className={`${
+                      props.darkMode ? "text-white" : ""
+                    } font-bold tracking-wide text-[2rem] mb-[1rem]`}
+                  >
+                    Industry Standard{" "}
+                    <span className="text-yellow-400">Technology.</span>
+                  </h1>
+                  <p
+                    className={`${
+                      props.darkMode ? "text-gray-400" : "text-gray-800"
+                    } text-[1.7rem]`}
+                  >
+                    We operate our fleet of tractors with industry standard GPS
+                    Tracking and electronic equipment monitoring. We can provide
+                    you with the coordinates of your freight at a moment's
+                    notice.
+                  </p>
+                </div>
+                <div
+                  data-aos="fade-up"
+                  data-aos-anchor-placement="bottom-bottom"
+                  data-aos-once="false"
+                  className="text-center"
+                >
+                  <h1
+                    className={`${
+                      props.darkMode ? "text-white" : ""
+                    } font-bold tracking-wide text-[2rem] mb-[1rem]`}
+                  >
+                    Customer <span className="text-yellow-400">Support.</span>
+                  </h1>
+                  <p
+                    className={`${
+                      props.darkMode ? "text-gray-400" : "text-gray-800"
+                    } text-[1.7rem]`}
+                  >
+                    We strive for honesty and transparency with you and
+                    everybody we work with.
                   </p>
                 </div>
               </div>

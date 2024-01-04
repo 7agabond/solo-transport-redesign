@@ -57,12 +57,16 @@ body {
   animation: fadein 2s;
 }
 
-@media (min-width: 768px) {
-  .services-grid {
-    display: grid;
-    gap: 1.5rem;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+.services-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.services-grid-2 {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr 1fr;
 }
 
 @keyframes fadein {
