@@ -5,7 +5,9 @@ import AOS from "aos";
 import $ from "jquery";
 
 const Services = (props) => {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(
+    window.innerWidth < 768 ? true : false
+  );
 
   const handleResize = () => {
     if (window.innerWidth < 768) {
@@ -19,7 +21,7 @@ const Services = (props) => {
 
   useEffect(() => {
     window.addEventListener("resize", handleResize);
-  });
+  }, []);
 
   useEffect(() => {
     $(window).on("load", () => {
@@ -50,96 +52,258 @@ const Services = (props) => {
               alt="ServicesBg"
               className="w-full md:h-[35vw] md:object-cover"
             />
-            <h1 className="absolute text-center top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-white text-6xl tracking-wider">
+            <h1 className="absolute text-center top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-white text-6xl tracking-wider container-fadein">
               Services<span className="text-yellow-300">.</span>
             </h1>
           </div>
           {isMobile ? (
-            <div
-              data-aos="fade-left"
-              data-aos-anchor-placement="bottom-bottom"
-              data-aos-once="false"
-              className={`${
-                props.darkMode ? "text-white" : ""
-              } text-center p-[1.5rem]`}
-            >
-              <h1>
-                We'll deliver internationally
-                <span className="text-yellow-400">.</span>
-              </h1>
-              <p>
-                With a network of carriers and terminals across North America,
-                we can get your freight moving quickly and delivered to/from
-                Canada and Mexico, as well as the Contiguous USA.
-              </p>
-            </div>
+            <>
+              <div
+                data-aos="fade-left"
+                data-aos-anchor-placement="bottom-bottom"
+                data-aos-once="true"
+                className="text-center p-[1.5rem]"
+              >
+                <h1
+                  className={`${
+                    props.darkMode ? "text-[white]" : ""
+                  } font-bold tracking-wide text-[1.6rem] mb-[0.5rem]`}
+                >
+                  We'll deliver{" "}
+                  <span className="text-yellow-400">internationally.</span>
+                </h1>
+                <p
+                  className={`${
+                    props.darkMode ? "text-gray-400" : "text-gray-800"
+                  } text-[1.2rem]`}
+                >
+                  With a network of carriers and terminals across North America,
+                  we can get your freight moving quickly and delivered to/from
+                  Canada and Mexico, as well as the Contiguous USA.
+                </p>
+              </div>
+              <div
+                data-aos="fade-right"
+                data-aos-anchor-placement="bottom-bottom"
+                data-aos-once="true"
+                className="text-center p-[1.5rem]"
+              >
+                <h1
+                  className={`${
+                    props.darkMode ? "text-[white]" : ""
+                  } font-bold tracking-wide text-[1.6rem] mb-[0.5rem]`}
+                >
+                  FTL & LTL
+                  <span className="text-yellow-400">.</span>
+                </h1>
+                <p
+                  className={`${
+                    props.darkMode ? "text-gray-400" : "text-gray-800"
+                  } text-[1.2rem]`}
+                >
+                  We'll move your Full Truckload or Less Than Truckload freight
+                  for a competitive price.
+                </p>
+              </div>
+              <div
+                data-aos="fade-left"
+                data-aos-anchor-placement="bottom-bottom"
+                data-aos-once="true"
+                className="text-center p-[1.5rem]"
+              >
+                <h1
+                  className={`${
+                    props.darkMode ? "text-[white]" : ""
+                  } font-bold tracking-wide text-[1.6rem] mb-[0.5rem]`}
+                >
+                  Infrastructure<span className="text-yellow-400">.</span>
+                </h1>
+                <p
+                  className={`${
+                    props.darkMode ? "text-gray-400" : "text-gray-800"
+                  } text-[1.2rem]`}
+                >
+                  Our secure yard is located near the World Trade International
+                  Bridge. From here we can coordinate with all parties involved
+                  in the movement of freight. We have the right equipment to
+                  help get your freight on the road.
+                </p>
+              </div>
+              <div
+                data-aos="fade-right"
+                data-aos-anchor-placement="bottom-bottom"
+                data-aos-once="true"
+                className="text-center p-[1.5rem]"
+              >
+                <h1
+                  className={`${
+                    props.darkMode ? "text-[white]" : ""
+                  } font-bold tracking-wide text-[1.6rem] mb-[0.5rem]`}
+                >
+                  Specialized Freight
+                  <span className="text-yellow-400">.</span>
+                </h1>
+                <p
+                  className={`${
+                    props.darkMode ? "text-gray-400" : "text-gray-800"
+                  } text-[1.2rem]`}
+                >
+                  We have very competent drivers, partners and dedicated
+                  specialized equipment to meet your over-sized and over-weight
+                  freight.
+                </p>
+              </div>
+              <div
+                data-aos="fade-left"
+                data-aos-anchor-placement="bottom-bottom"
+                data-aos-once="true"
+                className="text-center p-[1.5rem]"
+              >
+                <h1
+                  className={`${
+                    props.darkMode ? "text-[white]" : ""
+                  } font-bold tracking-wide text-[1.6rem] mb-[0.5rem]`}
+                >
+                  Industry Standard{" "}
+                  <span className="text-yellow-400">Technology.</span>
+                </h1>
+                <p
+                  className={`${
+                    props.darkMode ? "text-gray-400" : "text-gray-800"
+                  } text-[1.2rem]`}
+                >
+                  We operate our fleet of tractors with industry standard GPS
+                  Tracking and electronic equipment monitoring. We can provide
+                  you with the coordinates of your freight at a moment's notice.
+                </p>
+              </div>
+              <div
+                data-aos="fade-right"
+                data-aos-anchor-placement="bottom-bottom"
+                data-aos-once="true"
+                className="text-center p-[1.5rem]"
+              >
+                <h1
+                  className={`${
+                    props.darkMode ? "text-[white]" : ""
+                  } font-bold tracking-wide text-[1.6rem] mb-[0.5rem]`}
+                >
+                  Customer <span className="text-yellow-400">Support.</span>
+                </h1>
+                <p
+                  className={`${
+                    props.darkMode ? "text-gray-400" : "text-gray-800"
+                  } text-[1.2rem]`}
+                >
+                  We strive for honesty and transparency with you and everybody
+                  we work with.
+                </p>
+              </div>
+              <div
+                data-aos="fade"
+                data-aos-anchor-placement="bottom-bottom"
+                data-aos-once="true"
+                className="text-center p-[1.5rem]"
+              >
+                <h1
+                  className={`${
+                    props.darkMode ? "text-[white]" : ""
+                  } font-bold tracking-wide text-[1.6rem] mb-[0.5rem]`}
+                >
+                  We offer a variety of services
+                  <span className="text-yellow-400">.</span>
+                </h1>
+                <ul
+                  className={`${
+                    props.darkMode ? "text-gray-400" : "text-gray-800"
+                  } text-[1.2rem] list-none`}
+                >
+                  <li>Bonded Freight to/from Canada</li>
+                  <li>Door to Door Service US/Mexico</li>
+                  <li>Mexican Transportation</li>
+                  <li>Border Crossing</li>
+                  <li>Transloading</li>
+                  <li>Drayage</li>
+                  <li>Storage</li>
+                </ul>
+              </div>
+            </>
           ) : (
-            <div
-              data-aos="fade-up"
-              data-aos-anchor-placement="bottom-bottom"
-              data-aos-once="false"
-              className={`${
-                props.darkMode ? "text-white" : ""
-              } text-center p-[1.5rem]`}
-            >
-              <h1>
-                We'll deliver internationally
-                <span className="text-yellow-400">.</span>
-              </h1>
-              <p>
-                With a network of carriers and terminals across North America,
-                we can get your freight moving quickly and delivered to/from
-                Canada and Mexico, as well as the Contiguous USA.
-              </p>
-            </div>
+            <>
+              <div
+                data-aos="fade-up"
+                data-aos-anchor-placement="bottom-bottom"
+                data-aos-once="false"
+                className={`${
+                  props.darkMode ? "text-white" : ""
+                } text-center p-[1.5rem]`}
+              >
+                <h1>
+                  We'll deliver internationally
+                  <span className="text-yellow-400">.</span>
+                </h1>
+                <p>
+                  With a network of carriers and terminals across North America,
+                  we can get your freight moving quickly and delivered to/from
+                  Canada and Mexico, as well as the Contiguous USA.
+                </p>
+              </div>
+              <div className="services-grid p-[1.5rem]">
+                <div
+                  data-aos="fade-right"
+                  data-aos-anchor-placement="bottom-bottom"
+                  data-aos-once="false"
+                  className={`${
+                    props.darkMode ? "text-white" : ""
+                  } text-center`}
+                >
+                  <h1>
+                    FTL & LTL<span className="text-yellow-400">.</span>
+                  </h1>
+                  <p>
+                    We'll move your Full Truckload or Less Than Truckload
+                    freight for a competitive price.
+                  </p>
+                </div>
+                <div
+                  data-aos="fade-up"
+                  data-aos-anchor-placement="bottom-bottom"
+                  data-aos-once="false"
+                  className={`${
+                    props.darkMode ? "text-white" : ""
+                  } text-center`}
+                >
+                  <h1>
+                    Infrastructure<span className="text-yellow-400">.</span>
+                  </h1>
+                  <p>
+                    Our secure yard is located near the World Trade
+                    International Bridge. From here we can coordinate with all
+                    parties involved in the movement of freight. We have the
+                    right equipment to help get your freight on the road.
+                  </p>
+                </div>
+                <div
+                  data-aos="fade-left"
+                  data-aos-anchor-placement="bottom-bottom"
+                  data-aos-once="false"
+                  className={`${
+                    props.darkMode ? "text-white" : ""
+                  } text-center`}
+                >
+                  <h1>
+                    Specialized Freight
+                    <span className="text-yellow-400">.</span>
+                  </h1>
+                  <p>
+                    We have very competent drivers, partners and dedicated
+                    specialized equipment to meet your over-sized and
+                    over-weight freight.
+                  </p>
+                </div>
+              </div>
+            </>
           )}
-          <div className="services-grid p-[1.5rem]">
-            <div
-              data-aos="fade-right"
-              data-aos-anchor-placement="bottom-bottom"
-              data-aos-once="false"
-              className={`${props.darkMode ? "text-white" : ""} text-center`}
-            >
-              <h1>
-                FTL & LTL<span className="text-yellow-400">.</span>
-              </h1>
-              <p>
-                We'll move your Full Truckload or Less Than Truckload freight
-                for a competitive price.
-              </p>
-            </div>
-            <div
-              data-aos="fade-up"
-              data-aos-anchor-placement="bottom-bottom"
-              data-aos-once="false"
-              className={`${props.darkMode ? "text-white" : ""} text-center`}
-            >
-              <h1>
-                Infrastructure<span className="text-yellow-400">.</span>
-              </h1>
-              <p>
-                Our secure yard is located near the World Trade International
-                Bridge. From here we can coordinate with all parties involved in
-                the movement of freight. We have the right equipment to help get
-                your freight on the road.
-              </p>
-            </div>
-            <div
-              data-aos="fade-left"
-              data-aos-anchor-placement="bottom-bottom"
-              data-aos-once="false"
-              className={`${props.darkMode ? "text-white" : ""} text-center`}
-            >
-              <h1>
-                Specialized Freight<span className="text-yellow-400">.</span>
-              </h1>
-              <p>
-                We have very competent drivers, partners and dedicated
-                specialized equipment to meet your over-sized and over-weight
-                freight.
-              </p>
-            </div>
-          </div>
         </main>
       </div>
       <div className="loader-wrapper">
