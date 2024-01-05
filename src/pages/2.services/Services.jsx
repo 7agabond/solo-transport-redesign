@@ -69,8 +69,8 @@ const Services = (props) => {
                     props.darkMode ? "text-[white]" : ""
                   } font-bold tracking-wide text-[1.6rem] mb-[0.5rem]`}
                 >
-                  We'll deliver{" "}
-                  <span className="text-yellow-400">internationally.</span>
+                  We'll Deliver{" "}
+                  <span className="text-yellow-400">Internationally.</span>
                 </h1>
                 <p
                   className={`${
@@ -243,8 +243,8 @@ const Services = (props) => {
                     props.darkMode ? "text-white" : ""
                   } font-bold tracking-wide text-[2rem] mb-[1rem]`}
                 >
-                  We'll deliver internationally
-                  <span className="text-yellow-400">.</span>
+                  We'll Deliver{" "}
+                  <span className="text-yellow-400">Internationally.</span>
                 </h1>
                 <p
                   className={`${
