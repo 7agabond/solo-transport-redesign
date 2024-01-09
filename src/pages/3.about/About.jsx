@@ -32,7 +32,7 @@ const About = (props) => {
             About <span className="text-yellow-300">Solo.</span>
           </h1>
         </div>
-        <div>
+        <div className="services-grid-2 p-[2rem] max-w-[1200px] m-auto">
           <div>
             <h1>Established in 1998.</h1>
             <p>
@@ -43,7 +43,6 @@ const About = (props) => {
               to stay competitive in this industry. Laredo is our home but we
               have partners all across the continent.
             </p>
-            <img src={forkliftImg} />
           </div>
           <div>
             <h1>Our Goal.</h1>
@@ -51,8 +50,9 @@ const About = (props) => {
               To deliver your products safely and on time. We want to develop
               lasting relationships with our Customers and Carriers.
             </p>
-            <img src={platformImg} />
           </div>
+          <img src={forkliftImg} className="h-[500px] object-cover" />
+          <img src={platformImg} className="h-[500px] object-cover" />
         </div>
         <h1>We're Here to Help.</h1>
       </div>
