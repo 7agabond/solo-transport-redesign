@@ -23,10 +23,13 @@ const Home = (props) => {
         <div className="md:relative text-center mb-[4rem] md:mb-[initial]">
           <img src={truckImg} className="w-full md:h-[96.4vh] object-cover" />
           <div className="md:absolute md:bottom-[10%] md:left-[50%] md:translate-x-[-50%] md:translate-y-[-50%] text-center m-auto container-fadein w-[80%]">
-            <h1 className=" text-yellow-300 text-4xl xl:text-6xl mt-[2rem] font-bold">
+            <h1 className="whitespace-nowrap text-yellow-300 text-4xl xl:text-6xl mt-[2rem] font-bold">
               Solo Transport Inc.
             </h1>
-            <img src={stiLogo} className="m-auto my-[4rem] md:w-[40%]" />
+            <img
+              src={stiLogo}
+              className="m-auto mt-[4rem] mb-[3rem] md:w-[40%]"
+            />
             <div
               className={`md:absolute p-[1rem] ${
                 props.darkMode

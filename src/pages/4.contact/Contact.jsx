@@ -16,7 +16,19 @@ const Contact = (props) => {
 
   return (
     <>
-      <div>Contact</div>
+      <div
+        className={`${
+          props.darkMode ? "bg-gray-400" : "bg-gray-900"
+        } relative w-full h-[30vh]`}
+      >
+        <h1
+          className={`${
+            props.darkMode ? "text-gray-900" : "text-white"
+          } whitespace-nowrap absolute text-[2.5rem] md:text-[4rem] font-semibold top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] container-fadein md:tracking-wider`}
+        >
+          Contact Us<span className="text-yellow-300">.</span>
+        </h1>
+      </div>
       <div className="loader-wrapper">
         <span className="loader">
           <span className="loader-inner"></span>
