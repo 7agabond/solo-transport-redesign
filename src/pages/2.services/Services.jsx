@@ -1,8 +1,8 @@
 import { animate } from "motion";
 import { useEffect, useState } from "react";
-import servicesBackground from "../../assets/763586951.jpg";
 import AOS from "aos";
 import $ from "jquery";
+import servicesBackground from "../../assets/763586951.jpg";
 
 const Services = (props) => {
   const [isMobile, setIsMobile] = useState(

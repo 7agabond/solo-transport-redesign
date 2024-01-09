@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { animate } from "motion";
+import AOS from "aos";
+import $ from "jquery";
 import forkliftImg from "../../assets/forklift.jpg";
 import platformImg from "../../assets/img-2584_orig.jpg";
-import $ from "jquery";
 
 const About = (props) => {
   const [isMobile, setIsMobile] = useState(
@@ -29,6 +30,14 @@ const About = (props) => {
     });
   }, []);
 
+  useEffect(() => {
+    AOS.init({ duration: 2500 });
+  }, []);
+
+  setTimeout(() => {
+    AOS.refresh();
+  }, 500);
+
   props.darkMode
     ? animate("body", { backgroundColor: "rgb(2 6 23)" })
     : props.darkMode === false &&
@@ -44,14 +53,19 @@ const About = (props) => {
         <h1
           className={`${
             props.darkMode ? "text-gray-900" : "text-white"
-          } absolute text-[2rem] md:text-[4rem] font-semibold top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] container-fadein md:tracking-wider`}
+          } whitespace-nowrap absolute text-[2.5rem] md:text-[4rem] font-semibold top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] container-fadein md:tracking-wider`}
         >
           About <span className="text-yellow-300">Solo.</span>
         </h1>
       </div>
       {isMobile ? (
         <div>
-          <div className="text-center">
+          <div
+            data-aos="fade-up"
+            data-aos-once="true"
+            data-aos-anchor-placement="bottom-bottom"
+            className="text-center"
+          >
             <h1
               className={`${
                 props.darkMode ? "text-white" : ""
@@ -71,9 +85,27 @@ const About = (props) => {
               to stay competitive in this industry. Laredo is our home but we
               have partners all across the continent.
             </p>
-            <img src={forkliftImg} className="py-[2rem]" />
+            <p
+              className={`${
+                props.darkMode ? "text-gray-400" : "text-gray-500"
+              } text-[1.5rem]`}
+            >
+              ↓
+            </p>
           </div>
-          <div className="text-center">
+          <img
+            src={forkliftImg}
+            data-aos="fade"
+            data-aos-once="true"
+            data-aos-anchor-placement="bottom-bottom"
+            className="py-[2rem] px-[0.5rem]"
+          />
+          <div
+            data-aos="fade-up"
+            data-aos-once="true"
+            data-aos-anchor-placement="bottom-bottom"
+            className="text-center"
+          >
             <h1
               className={`${
                 props.darkMode ? "text-white" : ""
@@ -89,12 +121,28 @@ const About = (props) => {
               To deliver your products safely and on time. We want to develop
               lasting relationships with our Customers and Carriers.
             </p>
-            <img src={platformImg} className="py-[2rem]" />
+            <p
+              className={`${
+                props.darkMode ? "text-gray-400" : "text-gray-500"
+              } text-[1.5rem]`}
+            >
+              ↓
+            </p>
           </div>
+          <img
+            src={platformImg}
+            data-aos="fade"
+            data-aos-once="true"
+            data-aos-anchor-placement="bottom-bottom"
+            className="py-[2rem] px-[0.5rem]"
+          />
           <h1
+            data-aos="fade-up"
+            data-aos-once="true"
+            data-aos-anchor-placement="center-bottom"
             className={`${
               props.darkMode ? "text-white" : ""
-            } px-[1rem] text-center font-bold tracking-wide text-[2.3rem] pt-[4rem] pb-[9rem]`}
+            } whitespace-nowrap px-[1rem] text-center font-bold tracking-wide text-[2.3rem] pt-[4rem] pb-[9rem]`}
           >
             We're Here to <span className="text-yellow-300">Help.</span>
           </h1>
@@ -102,7 +150,12 @@ const About = (props) => {
       ) : (
         <div>
           <div className="services-grid-2 p-[2rem] max-w-[1200px] m-auto">
-            <div className="text-center">
+            <div
+              data-aos="fade-right"
+              data-aos-once="true"
+              data-aos-anchor-placement="bottom-bottom"
+              className="text-center"
+            >
               <h1
                 className={`${
                   props.darkMode ? "text-white" : ""
@@ -123,7 +176,12 @@ const About = (props) => {
                 but we have partners all across the continent.
               </p>
             </div>
-            <div className="text-center">
+            <div
+              data-aos="fade-left"
+              data-aos-once="true"
+              data-aos-anchor-placement="bottom-bottom"
+              className="text-center"
+            >
               <h1
                 className={`${
                   props.darkMode ? "text-white" : ""
@@ -142,14 +200,23 @@ const About = (props) => {
             </div>
             <img
               src={forkliftImg}
+              data-aos="fade-up"
+              data-aos-once="true"
+              data-aos-anchor-placement="bottom-bottom"
               className="rounded-md h-[500px] object-cover"
             />
             <img
               src={platformImg}
+              data-aos="fade-up"
+              data-aos-once="true"
+              data-aos-anchor-placement="bottom-bottom"
               className="rounded-md h-[500px] object-cover"
             />
           </div>
           <h1
+            data-aos="fade"
+            data-aos-once="true"
+            data-aos-anchor-placement="bottom-bottom"
             className={`${
               props.darkMode ? "text-white" : ""
             } text-center font-bold tracking-wide text-[2.5rem] pt-[5rem] pb-[7rem]`}
