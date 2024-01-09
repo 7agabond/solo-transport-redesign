@@ -152,7 +152,7 @@ const About = (props) => {
           <div className="services-grid-2 p-[2rem] max-w-[1200px] m-auto">
             <div
               data-aos="fade-right"
-              data-aos-once="true"
+              data-aos-once="false"
               data-aos-anchor-placement="bottom-bottom"
               className="text-center"
             >
@@ -178,7 +178,7 @@ const About = (props) => {
             </div>
             <div
               data-aos="fade-left"
-              data-aos-once="true"
+              data-aos-once="false"
               data-aos-anchor-placement="bottom-bottom"
               className="text-center"
             >
@@ -201,21 +201,21 @@ const About = (props) => {
             <img
               src={forkliftImg}
               data-aos="fade-up"
-              data-aos-once="true"
+              data-aos-once="false"
               data-aos-anchor-placement="bottom-bottom"
               className="rounded-md h-[500px] object-cover"
             />
             <img
               src={platformImg}
               data-aos="fade-up"
-              data-aos-once="true"
+              data-aos-once="false"
               data-aos-anchor-placement="bottom-bottom"
               className="rounded-md h-[500px] object-cover"
             />
           </div>
           <h1
             data-aos="fade"
-            data-aos-once="true"
+            data-aos-once="false"
             data-aos-anchor-placement="bottom-bottom"
             className={`${
               props.darkMode ? "text-white" : ""
