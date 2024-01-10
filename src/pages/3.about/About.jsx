@@ -137,7 +137,7 @@ const About = (props) => {
             className="py-[2rem] px-[0.5rem]"
           />
           <h1
-            data-aos="fade-up"
+            data-aos="fade"
             data-aos-once="true"
             data-aos-anchor-placement="center-bottom"
             className={`${
