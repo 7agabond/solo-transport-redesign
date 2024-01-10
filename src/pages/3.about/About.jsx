@@ -142,7 +142,7 @@ const About = (props) => {
             data-aos-anchor-placement="center-bottom"
             className={`${
               props.darkMode ? "text-white" : ""
-            } whitespace-nowrap px-[1rem] text-center font-bold tracking-wide text-[2.3rem] pt-[4rem] pb-[9rem]`}
+            } px-[1rem] text-center font-bold tracking-wide text-[2.3rem] pt-[4rem] pb-[9rem]`}
           >
             We're Here to <span className="text-yellow-300">Help.</span>
           </h1>
