@@ -1,9 +1,8 @@
-import { useState, useEffect } from "react";
 import { animate } from "motion";
 import truckImg from "../../assets/800318861.jpg";
 import stiLogo from "../../assets/sti-logo-black-yellow.png";
 import Typed from "react-typed";
-import $ from "jquery";
+import Loader from "../../components/Loader";
 
 const Home = (props) => {
   props.darkMode
@@ -11,18 +10,12 @@ const Home = (props) => {
     : props.darkMode === false &&
       animate("body", { backgroundColor: "initial" });
 
-  useEffect(() => {
-    $(window).on("load", () => {
-      $(".loader-wrapper").fadeOut("slow");
-    });
-  }, []);
-
   return (
     <>
       <main>
         <div className="md:relative text-center mb-[4rem] md:mb-[initial]">
           <img src={truckImg} className="w-full md:h-[96.4vh] object-cover" />
-          <div className="md:absolute md:bottom-[10%] md:left-[50%] md:translate-x-[-50%] md:translate-y-[-50%] text-center m-auto container-fadein w-[80%]">
+          <div className="md:absolute md:bottom-[0%] md:left-[50%] md:translate-x-[-50%] md:translate-y-[-50%] text-center m-auto container-fadein w-[80%]">
             <h1 className="whitespace-nowrap text-yellow-300 text-4xl xl:text-6xl mt-[2rem] font-bold">
               Solo Transport Inc.
             </h1>
@@ -51,11 +44,7 @@ const Home = (props) => {
           </div>
         </div>
       </main>
-      <div className="loader-wrapper">
-        <span className="loader">
-          <span className="loader-inner"></span>
-        </span>
-      </div>
+      <Loader />
     </>
   );
 };

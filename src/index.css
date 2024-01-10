@@ -55,14 +55,25 @@ body {
   -ms-animation: fadein 2s; /* Internet Explorer */
   -o-animation: fadein 2s; /* Opera < 12.1 */
   animation: fadein 2s;
+  animation-delay: 1.9s;
+}
+
+.container-fadeout {
+  -webkit-animation: fadeout 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadeout 2s; /* Firefox < 16 */
+  -ms-animation: fadeout 2s; /* Internet Explorer */
+  -o-animation: fadeout 2s; /* Opera < 12.1 */
+  animation: fadeout 2s;
 }
 
 .fadein-right {
   animation: fadeInRight 1.5s ease-in-out;
+  animation-delay: 1.9s;
 }
 
 .fadein-left {
   animation: fadeInLeft 1.5s ease-in-out;
+  animation-delay: 1.9s;
 }
 
 .services-grid {
@@ -85,7 +96,7 @@ body {
 .leaflet-container {
   position: relative;
   z-index: 1;
-  height: 70vh;
+  height: 85vh;
   width: 100%;
 }
 

@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { animate } from "motion";
 import AOS from "aos";
-import $ from "jquery";
 import forkliftImg from "../../assets/forklift.jpg";
 import platformImg from "../../assets/img-2584_orig.jpg";
+import Loader from "../../components/Loader";
 
 const About = (props) => {
   const [isMobile, setIsMobile] = useState(
@@ -25,12 +25,6 @@ const About = (props) => {
   }, []);
 
   useEffect(() => {
-    $(window).on("load", () => {
-      $(".loader-wrapper").fadeOut("slow");
-    });
-  }, []);
-
-  useEffect(() => {
     AOS.init({ duration: 2500 });
   }, []);
 
@@ -47,12 +41,12 @@ const About = (props) => {
     <>
       <div
         className={`${
-          props.darkMode ? "bg-gray-400" : "bg-gray-900"
+          props.darkMode ? "bg-gray-900" : "bg-gray-950"
         } relative w-full h-[30vh]`}
       >
         <h1
           className={`${
-            props.darkMode ? "text-gray-900" : "text-white"
+            props.darkMode ? "text-gray-200" : "text-white"
           } whitespace-nowrap absolute text-[2.5rem] md:text-[4rem] font-semibold top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] container-fadein md:tracking-wider`}
         >
           About <span className="text-yellow-300">Solo.</span>
@@ -225,11 +219,7 @@ const About = (props) => {
           </h1>
         </div>
       )}
-      <div className="loader-wrapper">
-        <span className="loader">
-          <span className="loader-inner"></span>
-        </span>
-      </div>
+      <Loader />
     </>
   );
 };

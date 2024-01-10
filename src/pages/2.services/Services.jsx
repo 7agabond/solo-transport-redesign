@@ -1,8 +1,8 @@
 import { animate } from "motion";
 import { useEffect, useState } from "react";
 import AOS from "aos";
-import $ from "jquery";
 import servicesBackground from "../../assets/763586951.jpg";
+import Loader from "../../components/Loader";
 
 const Services = (props) => {
   const [isMobile, setIsMobile] = useState(
@@ -21,12 +21,6 @@ const Services = (props) => {
 
   useEffect(() => {
     window.addEventListener("resize", handleResize);
-  }, []);
-
-  useEffect(() => {
-    $(window).on("load", () => {
-      $(".loader-wrapper").fadeOut("slow");
-    });
   }, []);
 
   useEffect(() => {
@@ -411,11 +405,7 @@ const Services = (props) => {
           )}
         </main>
       </div>
-      <div className="loader-wrapper">
-        <span className="loader">
-          <span className="loader-inner"></span>
-        </span>
-      </div>
+      <Loader />
     </>
   );
 };
