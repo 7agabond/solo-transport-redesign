@@ -57,6 +57,14 @@ body {
   animation: fadein 2s;
 }
 
+.fadein-right {
+  animation: fadeInRight 1.5s ease-in-out;
+}
+
+.fadein-left {
+  animation: fadeInLeft 1.5s ease-in-out;
+}
+
 .services-grid {
   display: grid;
   gap: 1.5rem;
@@ -67,6 +75,35 @@ body {
   display: grid;
   gap: 1.5rem;
   grid-template-columns: 1fr 1fr;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.leaflet-container {
+  position: relative;
+  z-index: -1;
+  height: 70vh;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    display: block;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .leaflet-container {
+    position: relative;
+    z-index: -1;
+    height: 40vh;
+    width: 100%;
+  }
 }
 
 @keyframes fadein {
@@ -112,6 +149,26 @@ body {
 @-o-keyframes fadein {
   from {
     opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-300px);
   }
   to {
     opacity: 1;
