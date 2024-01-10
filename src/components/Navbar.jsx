@@ -19,7 +19,7 @@ const Navbar = (props) => {
       <div
         className={`fixed ${
           props.darkMode ? "bg-black/[0.3] text-white" : "bg-white/[0.3]"
-        } z-10 hidden md:flex w-full justify-between border-solid border-b border-gray-200 shadow-md`}
+        } z-[998] hidden md:flex w-full justify-between border-solid border-b border-gray-200 shadow-md`}
       >
         <a href="/">
           <h1 className="font-fjalla text-4xl hover:text-yellow-400 transition-all tracking-wide p-5">
@@ -58,7 +58,7 @@ const Navbar = (props) => {
       <div
         className={`fixed ${
           props.darkMode ? "bg-black/[0.3] text-white" : "bg-white/[0.3]"
-        } z-10 md:hidden w-full flex justify-between items-center p-3 border-solid border-b border-gray-300 shadow-md`}
+        } z-[998] md:hidden w-full flex justify-between items-center p-3 border-solid border-b border-gray-300 shadow-md`}
       >
         <h1 className="font-fjalla text-4xl z-[1] tracking-wide hover:text-yellow-500 transition-all">
           <a href="/">SOLO TRANSPORT</a>

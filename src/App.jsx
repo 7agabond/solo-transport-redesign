@@ -13,7 +13,7 @@ import Contact from "./pages/4.contact/Contact";
 function App() {
   const { setItem, getItem } = useLocalStorage("value");
 
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     setDarkMode(getItem());

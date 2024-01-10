@@ -84,7 +84,7 @@ body {
 
 .leaflet-container {
   position: relative;
-  z-index: -1;
+  z-index: 1;
   height: 70vh;
   width: 100%;
 }
@@ -100,7 +100,7 @@ body {
 @media (max-width: 768px) {
   .leaflet-container {
     position: relative;
-    z-index: -1;
+    z-index: 1;
     height: 40vh;
     width: 100%;
   }
