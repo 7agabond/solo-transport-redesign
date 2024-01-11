@@ -55,7 +55,7 @@ body {
   -ms-animation: fadein 2s; /* Internet Explorer */
   -o-animation: fadein 2s; /* Opera < 12.1 */
   animation: fadein 2s;
-  animation-delay: 1.9s;
+  animation-delay: 2s;
 }
 
 .container-fadeout {
@@ -68,12 +68,12 @@ body {
 
 .fadein-right {
   animation: fadeInRight 1.5s ease-in-out;
-  animation-delay: 1.9s;
+  animation-delay: 2s;
 }
 
 .fadein-left {
   animation: fadeInLeft 1.5s ease-in-out;
-  animation-delay: 1.9s;
+  animation-delay: 2s;
 }
 
 .services-grid {

@@ -42,7 +42,7 @@ const About = (props) => {
       <div
         className={`${
           props.darkMode ? "bg-gray-900" : "bg-gray-950"
-        } relative w-full h-[30vh]`}
+        } relative w-full h-[18rem]`}
       >
         <h1
           className={`${
