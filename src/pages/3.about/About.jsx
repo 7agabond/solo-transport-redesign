@@ -56,6 +56,7 @@ const About = (props) => {
         <div>
           <div
             data-aos="fade-up"
+            data-aos-delay="1000"
             data-aos-once="true"
             data-aos-anchor-placement="bottom-bottom"
             className="text-center"
@@ -90,6 +91,7 @@ const About = (props) => {
           <img
             src={forkliftImg}
             data-aos="fade"
+            data-aos-delay="1250"
             data-aos-once="true"
             data-aos-anchor-placement="bottom-bottom"
             className="py-[2rem] px-[0.5rem]"
@@ -146,6 +148,7 @@ const About = (props) => {
           <div className="services-grid-2 p-[2rem] max-w-[1200px] m-auto">
             <div
               data-aos="fade-right"
+              data-aos-delay="1500"
               data-aos-once="false"
               data-aos-anchor-placement="bottom-bottom"
               className="text-center"
@@ -172,6 +175,7 @@ const About = (props) => {
             </div>
             <div
               data-aos="fade-left"
+              data-aos-delay="1500"
               data-aos-once="false"
               data-aos-anchor-placement="bottom-bottom"
               className="text-center"
@@ -195,6 +199,7 @@ const About = (props) => {
             <img
               src={forkliftImg}
               data-aos="fade-up"
+              data-aos-delay="1000"
               data-aos-once="false"
               data-aos-anchor-placement="bottom-bottom"
               className="rounded-md h-[500px] object-cover"
@@ -202,6 +207,7 @@ const About = (props) => {
             <img
               src={platformImg}
               data-aos="fade-up"
+              data-aos-delay="1000"
               data-aos-once="false"
               data-aos-anchor-placement="bottom-bottom"
               className="rounded-md h-[500px] object-cover"
@@ -209,6 +215,7 @@ const About = (props) => {
           </div>
           <h1
             data-aos="fade"
+            data-aos-delay="500"
             data-aos-once="false"
             data-aos-anchor-placement="bottom-bottom"
             className={`${

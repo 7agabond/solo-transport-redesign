@@ -54,6 +54,7 @@ const Services = (props) => {
             <>
               <div
                 data-aos="fade-left"
+                data-aos-delay="1500"
                 data-aos-once="true"
                 data-aos-anchor-placement="bottom-bottom"
                 className="text-center p-[1.7rem]"
@@ -78,6 +79,7 @@ const Services = (props) => {
               </div>
               <div
                 data-aos="fade-right"
+                data-aos-delay="1500"
                 data-aos-once="true"
                 data-aos-anchor-placement="bottom-bottom"
                 className="text-center p-[1.7rem]"
@@ -101,6 +103,7 @@ const Services = (props) => {
               </div>
               <div
                 data-aos="fade-left"
+                data-aos-delay="1000"
                 data-aos-once="true"
                 data-aos-anchor-placement="bottom-bottom"
                 className="text-center p-[1.7rem]"
@@ -125,6 +128,7 @@ const Services = (props) => {
               </div>
               <div
                 data-aos="fade-right"
+                data-aos-delay="500"
                 data-aos-once="true"
                 data-aos-anchor-placement="bottom-bottom"
                 className="text-center p-[1.7rem]"
@@ -228,6 +232,7 @@ const Services = (props) => {
             <>
               <div
                 data-aos="fade-up"
+                data-aos-delay="1500"
                 data-aos-anchor-placement="bottom-bottom"
                 data-aos-once="false"
                 className="text-center p-[2rem] w-[65%] m-auto"
@@ -253,6 +258,7 @@ const Services = (props) => {
               <div className="services-grid p-[2rem] w-[75%] m-auto">
                 <div
                   data-aos="fade-right"
+                  data-aos-delay="1000"
                   data-aos-anchor-placement="bottom-bottom"
                   data-aos-once="false"
                   className="text-center"
@@ -275,6 +281,7 @@ const Services = (props) => {
                 </div>
                 <div
                   data-aos="fade-up"
+                  data-aos-delay="1000"
                   data-aos-anchor-placement="bottom-bottom"
                   data-aos-once="false"
                   className="text-center"
@@ -299,6 +306,7 @@ const Services = (props) => {
                 </div>
                 <div
                   data-aos="fade-left"
+                  data-aos-delay="1000"
                   data-aos-anchor-placement="bottom-bottom"
                   data-aos-once="false"
                   className="text-center"
@@ -325,6 +333,7 @@ const Services = (props) => {
               <div className="services-grid-2 p-[2rem] w-[70%] m-auto">
                 <div
                   data-aos="fade-up"
+                  data-aos-delay="750"
                   data-aos-anchor-placement="bottom-bottom"
                   data-aos-once="false"
                   className="text-center"
@@ -350,6 +359,7 @@ const Services = (props) => {
                 </div>
                 <div
                   data-aos="fade-up"
+                  data-aos-delay="750"
                   data-aos-anchor-placement="bottom-bottom"
                   data-aos-once="false"
                   className="text-center"
@@ -373,6 +383,7 @@ const Services = (props) => {
               </div>
               <div
                 data-aos="fade"
+                data-aos-delay="500"
                 data-aos-once="false"
                 data-aos-anchor-placement="bottom-bottom"
                 className="text-center p-[1.7rem]"
