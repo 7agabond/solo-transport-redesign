@@ -9,6 +9,7 @@ import Home from "./pages/1.home/Home";
 import Services from "./pages/2.services/Services";
 import About from "./pages/3.about/About";
 import Contact from "./pages/4.contact/Contact";
+/
 
 function App() {
   const { setItem, getItem } = useLocalStorage("value");
