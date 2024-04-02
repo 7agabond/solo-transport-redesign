@@ -6,7 +6,7 @@ import icon from "leaflet/dist/images/marker-icon.png";
 import iconShadow from "leaflet/dist/images/marker-shadow.png";
 import "leaflet/dist/leaflet.css";
 import Loader from "../../components/Loader";
-////
+/////
 
 const Contact = (props) => {
   const [isMobile, setIsMobile] = useState(
