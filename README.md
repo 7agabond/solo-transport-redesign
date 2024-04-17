@@ -2,9 +2,3 @@ This is a website designed through Vite, with React. It will be deployed on a se
 
 CURRENT BUGS BEING WORKED ON:
 Will attempt to fix animation delays by using a timeout function.
-//
-//
-//
-//
-//
-//
