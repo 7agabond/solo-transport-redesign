@@ -4,3 +4,4 @@ CURRENT BUGS BEING WORKED ON:
 Will attempt to fix animation delays by using a timeout function.
 /
 //
+/
