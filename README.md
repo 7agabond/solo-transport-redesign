@@ -6,3 +6,4 @@ Will attempt to fix animation delays by using a timeout function.
 /
 /
 /
+/
